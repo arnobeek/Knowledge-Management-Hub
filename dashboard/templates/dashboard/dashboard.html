@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UN Uganda Knowledge Dashboard</title>
-<link rel="stylesheet" href="static/dashboard/styles.css">
+<link rel="stylesheet" href="{% static 'static/dashboard/styles.css' %}">
 </head>
 <body>
 
 <div class="bar-utility">
   <div class="bar-utility-inner">
-    <a href="about.html">About UN Uganda</a>
+    <a href="{% url 'dashbaord:about' %}">About UN Uganda</a>
     <a href="#">Resource centre</a>
     <a href="#">Reporting guidance</a>
     <a href="#">Help desk</a>
@@ -22,7 +23,7 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="brand" href="#">
+    <a class="brand" href="{% url 'dashbaord:dashboard' %}">
       <span class="brand-mark" aria-hidden="true">UN</span>
       <span class="brand-text">
         <span class="brand-name">UN Uganda</span>
@@ -30,13 +31,13 @@
       </span>
     </a>
     <nav class="site-nav">
-      <a class="active" href="#">Repository</a>
-      <a href="#">Achievements</a>
-      <a href="#">Projects</a>
-      <a href="#">Partners</a>
-      <a href="#">Media reports</a>
-      <a href="#">Maps &amp; charts</a>
-      <a href="#">Cooperation framework</a>
+      <a class="active" href="{% url 'dashbaord:dashboard' %}">Repository</a>
+      <a href="{% url 'dashbaord:dashboard' %}">Achievements</a>
+      <a href="{% url 'dashbaord:dashboard' %}">Projects</a>
+      <a href="{% url 'dashbaord:dashboard' %}">Partners</a>
+      <a href="{% url 'dashbaord:dashboard' %}">Media reports</a>
+      <a href="{% url 'dashbaord:dashboard' %}">Maps &amp; charts</a>
+      <a href="{% url 'dashbaord:dashboard' %}">Cooperation framework</a>
       <a href="#">Directory</a>
     </nav>
   </div>
@@ -88,7 +89,7 @@
   <div id="results"></div>
 </main>
 
-<script src="static/dashboard/dashboard.js"></script>
+<script src="{% static 'static/dashboard/dashboard.js' %}"></script>
 
 </body>
 </html>

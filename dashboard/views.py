@@ -1,4 +1,13 @@
 from django.shortcuts import render
 
+
 def dashboard(request):
-    return render(request, "dashboard/dashboard.html")
+    """Main repository view — item data is currently rendered client-side
+    from static/dashbaord/js/script.js. Once real repository data is
+    available server-side, pass it into the context here and read it
+    from the template instead of the hardcoded JS array."""
+    return render(request, "dashbaord/dashboard.html")
+
+
+def about(request):
+    return render(request, "dashboard/about.html")
