@@ -3,20 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UN Uganda Knowledge Management Hub</title>
-<link rel="stylesheet" href="{% static 'dashboard/styles.css' %}"/>
-
+<title>UN Uganda Knowledge Dashboard</title>
+<link rel="stylesheet" href="static/dashboard/styles.css">
 </head>
 <body>
 
-<header>
-  <div>
-    <h1>UN Uganda Knowledge Dashboard</h1>
-    <p>Knowledge repository and discovery layer</p>
+<div class="bar-utility">
+  <div class="bar-utility-inner">
+    <a href="about.html">About UN Uganda</a>
+    <a href="#">Resource centre</a>
+    <a href="#">Reporting guidance</a>
+    <a href="#">Help desk</a>
+    <div class="bar-utility-search">
+      <input type="text" placeholder="Search the repository&hellip;" aria-label="Search the repository">
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="#">
+      <span class="brand-mark" aria-hidden="true">UN</span>
+      <span class="brand-text">
+        <span class="brand-name">UN Uganda</span>
+        <span class="brand-sub">Knowledge repository</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a class="active" href="#">Repository</a>
+      <a href="#">Achievements</a>
+      <a href="#">Projects</a>
+      <a href="#">Partners</a>
+      <a href="#">Media reports</a>
+      <a href="#">Maps &amp; charts</a>
+      <a href="#">Cooperation framework</a>
+      <a href="#">Directory</a>
+    </nav>
   </div>
 </header>
 
 <main>
+  <div class="page-heading">
+    <h1>Knowledge repository and discovery layer</h1>
+    <p>Browse achievements, projects, partnerships, media reports, maps and Cooperation Framework outcomes across UN agencies in Uganda.</p>
+  </div>
+
   <div class="tabs" id="tabs">
     <button class="view-tab active" data-view="all">All items</button>
     <button class="view-tab" data-view="Achievement">Achievements</button>
@@ -57,7 +88,7 @@
   <div id="results"></div>
 </main>
 
-<script src="{% static 'dashboard/dashboard.js' %}"></script>
+<script src="static/dashboard/dashboard.js"></script>
 
 </body>
 </html>
