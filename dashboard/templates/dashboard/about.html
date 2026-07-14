@@ -5,13 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About UN Uganda — UN Uganda Knowledge Dashboard</title>
-<link rel="stylesheet" href="{% static 'static/dashboard/styles.css' %}">
+<link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
 </head>
 <body>
 
 <div class="bar-utility">
   <div class="bar-utility-inner">
-    <a href="{% url 'dashbaord:about' %}" class="active">About UN Uganda</a>
+    <a href="{% url 'dashboard:about' %}" class="active">About UN Uganda</a>
     <a href="#">Resource centre</a>
     <a href="#">Reporting guidance</a>
     <a href="#">Help desk</a>
@@ -23,7 +23,7 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="brand" href="{% url 'dashbaord:dashboard' %}">
+    <a class="brand" href="{% url 'dashboard:dashboard' %}">
       <span class="brand-mark" aria-hidden="true">UN</span>
       <span class="brand-text">
         <span class="brand-name">UN Uganda</span>
@@ -31,13 +31,13 @@
       </span>
     </a>
     <nav class="site-nav">
-      <a href="{% url 'dashbaord:dashboard' %}">Repository</a>
-      <a href="{% url 'dashbaord:dashboard' %}">Achievements</a>
-      <a href="{% url 'dashbaord:dashboard' %}">Projects</a>
-      <a href="{% url 'dashbaord:dashboard' %}">Partners</a>
-      <a href="{% url 'dashbaord:dashboard' %}">Media reports</a>
-      <a href="{% url 'dashbaord:dashboard' %}">Maps &amp; charts</a>
-      <a href="{% url 'dashbaord:dashboard' %}">Cooperation framework</a>
+      <a href="{% url 'dashboard:dashboard' %}">Repository</a>
+      <a href="{% url 'dashboard:dashboard' %}">Achievements</a>
+      <a href="{% url 'dashboard:dashboard' %}">Projects</a>
+      <a href="{% url 'dashboard:dashboard' %}">Partners</a>
+      <a href="{% url 'dashboard:dashboard' %}">Media reports</a>
+      <a href="{% url 'dashboard:dashboard' %}">Maps &amp; charts</a>
+      <a href="{% url 'dashboard:dashboard' %}">Cooperation framework</a>
       <a href="#">Directory</a>
     </nav>
   </div>
