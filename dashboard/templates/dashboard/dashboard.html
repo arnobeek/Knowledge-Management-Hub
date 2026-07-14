@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Knowledge Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UN Uganda Knowledge Management Hub</title>
+<link rel="stylesheet" href="{% static 'dashboard/styles.css' %}"/>
+
 </head>
 <body>
 
-<h1>UN Uganda Knowledge Dashboard</h1>
+<header>
+  <div>
+    <h1>UN Uganda Knowledge Dashboard</h1>
+    <p>Knowledge repository and discovery layer</p>
+  </div>
+</header>
+
+<main>
+  <div class="tabs" id="tabs">
+    <button class="view-tab active" data-view="all">All items</button>
+    <button class="view-tab" data-view="Achievement">Achievements</button>
+    <button class="view-tab" data-view="Project">Projects</button>
+    <button class="view-tab" data-view="Partner">Partners</button>
+    <button class="view-tab" data-view="Media Report">Media reports</button>
+    <button class="view-tab" data-view="Map/Chart">Maps &amp; charts</button>
+    <button class="view-tab" data-view="Cooperation Framework">Cooperation framework outcomes</button>
+  </div>
+
+  <div class="filters">
+    <select id="f-theme"></select>
+    <select id="f-agency"></select>
+    <select id="f-region"></select>
+    <select id="f-sdg"></select>
+    <select id="f-year"></select>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <p class="label">Items shown</p>
+      <p class="value" id="stat-count">0</p>
+    </div>
+    <div class="stat-card">
+      <p class="label">Agencies represented</p>
+      <p class="value" id="stat-agencies">0</p>
+    </div>
+    <div class="stat-card">
+      <p class="label">Regions covered</p>
+      <p class="value" id="stat-regions">0</p>
+    </div>
+    <div class="stat-card">
+      <p class="label">SDGs touched</p>
+      <p class="value" id="stat-sdgs">0</p>
+    </div>
+  </div>
+
+  <div id="results"></div>
+</main>
+
+<script src="{% static 'dashboard/dashboard.js' %}"></script>
 
 </body>
 </html>
