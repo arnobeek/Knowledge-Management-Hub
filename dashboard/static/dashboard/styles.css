@@ -30,16 +30,20 @@ a { text-decoration: none; color: inherit; }
 
 .bar-welcome {
   background: var(--un-navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .bar-welcome-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 30px;
+  border-bottom: 3px solid var(--un-blue);
 }
 
 .welcome-home {
@@ -56,6 +60,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   color: #E4EAF0;
 }
+
 
 /* ---------- Logo row ---------- */
 
@@ -333,4 +338,43 @@ select {
   font-size: 14px;
   padding: 24px 0;
   text-align: center;
+}
+
+.site-footer {
+  background: var(--un-navy);
+  margin-top: 40px;
+}
+
+.site-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 3px solid var(--un-blue);
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #B9C6D4;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #E4EAF0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
