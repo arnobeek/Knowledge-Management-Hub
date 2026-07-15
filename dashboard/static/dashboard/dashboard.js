@@ -25,7 +25,7 @@ const DATA = [
 ];
 
 let currentView = "all";
-const sel = { theme: "", agency: "", region: "", sdg: "", year: "" };
+const sel = { theme: "", agency: "", region: "", sdg: "", year: "", search: "" };
 
 function unique(arr) { return [...new Set(arr)].sort(); }
 
@@ -37,6 +37,10 @@ function populateSelect(id, values, label) {
     sel[id.replace("f-", "")] = e.target.value;
     render();
   });
+  document.getElementById("f-search").addEventListener("input", e => {
+  sel.search = e.target.value.trim().toLowerCase();
+  render();
+});
 }
 
 populateSelect("f-theme", unique(DATA.map(d => d.theme)), "Theme");
@@ -62,6 +66,7 @@ function render() {
     if (sel.region && d.region !== sel.region) return false;
     if (sel.sdg && !d.sdg.includes(sel.sdg)) return false;
     if (sel.year && String(d.year) !== String(sel.year)) return false;
+    if (sel.search && !(d.title.toLowerCase().includes(sel.search) || d.desc.toLowerCase().includes(sel.search))) return false;
     return true;
   });
 

@@ -24,13 +24,16 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="brand" href="{% url 'dashboard:dashboard' %}">
-      <span class="brand-mark" aria-hidden="true">UN</span>
-      <span class="brand-text">
-        <span class="brand-name">UN Uganda</span>
-        <span class="brand-sub">Knowledge Management Hub</span>
-      </span>
     </a>
+    <a class="brand" href="{% url 'dashboard:dashboard' %}">
+    <span class="brand-mark" aria-hidden="true">UN</span>
+    <span class="brand-text">
+      <span class="brand-name">UN Uganda</span>
+      <span class="brand-sub">Knowledge Management Hub</span>
+    </span>
+  </a>
+  <span class="header-divider"></span>
+  <span class="header-org-name">UN Uganda</span>
   </div>
 </header>
 
@@ -58,6 +61,7 @@
     <select id="f-region"></select>
     <select id="f-sdg"></select>
     <select id="f-year"></select>
+    <input type="text" id="f-search" placeholder="Search titles and descriptions&hellip;">
   </div>
 
   <div class="stats">

@@ -57,7 +57,7 @@ a { text-decoration: none; color: inherit; }
   color: #E4EAF0;
 }
 
-/* ---------- Logo row (no search) ---------- */
+/* ---------- Logo row ---------- */
 
 .site-header {
   background: #fff;
@@ -70,6 +70,19 @@ a { text-decoration: none; color: inherit; }
   padding: 14px 24px;
   display: flex;
   align-items: center;
+}
+
+.header-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border-strong);
+  margin: 0 16px;
+}
+
+.header-org-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .brand {
@@ -183,6 +196,17 @@ main {
 }
 
 select {
+  width: 100%;
+  padding: 7px 9px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text-primary);
+}
+
+#f-search {
   width: 100%;
   padding: 7px 9px;
   border-radius: var(--radius);
