@@ -9,15 +9,16 @@
 </head>
 <body>
 
-<div class="bar-utility">
-  <div class="bar-utility-inner">
-    <a href="{% url 'dashboard:about' %}">About UN Uganda</a>
-    <a href="#">Resource centre</a>
-    <a href="#">Reporting guidance</a>
-    <a href="#">Help desk</a>
-    <div class="bar-utility-search">
-      <input type="text" placeholder="Search the repository&hellip;" aria-label="Search the repository">
-    </div>
+<div class="bar-welcome">
+  <div class="bar-welcome-inner">
+    <span class="welcome-home">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 11L12 3L21 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 10V20H19V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Welcome to UN Uganda
+    </span>
+    <span class="welcome-lang">English</span>
   </div>
 </div>
 
@@ -27,36 +28,28 @@
       <span class="brand-mark" aria-hidden="true">UN</span>
       <span class="brand-text">
         <span class="brand-name">UN Uganda</span>
-        <span class="brand-sub">Knowledge repository</span>
+        <span class="brand-sub">Knowledge Management Hub</span>
       </span>
     </a>
-    <nav class="site-nav">
-      <a class="active" href="{% url 'dashboard:dashboard' %}">Repository</a>
-      <a href="{% url 'dashboard:dashboard' %}">Achievements</a>
-      <a href="{% url 'dashboard:dashboard' %}">Projects</a>
-      <a href="{% url 'dashboard:dashboard' %}">Partners</a>
-      <a href="{% url 'dashboard:dashboard' %}">Media reports</a>
-      <a href="{% url 'dashboard:dashboard' %}">Maps &amp; charts</a>
-      <a href="{% url 'dashboard:dashboard' %}">Cooperation framework</a>
-      <a href="#">Directory</a>
-    </nav>
   </div>
 </header>
 
-<main>
-  <div class="page-heading">
-    <h1>Knowledge repository and discovery layer</h1>
-    <p>Browse achievements, projects, partnerships, media reports, maps and Cooperation Framework outcomes across UN agencies in Uganda.</p>
-  </div>
-
-  <div class="tabs" id="tabs">
+<nav class="site-nav" id="tabs">
+  <div class="site-nav-inner">
     <button class="view-tab active" data-view="all">All items</button>
     <button class="view-tab" data-view="Achievement">Achievements</button>
+    <button class="view-tab" data-view="Partner">Partnerships</button>
+    <button class="view-tab" data-view="Media Report">Media Engagements</button>
+    <button class="view-tab" data-view="Cooperation Framework">Cooperation Framework Outcomes</button>
     <button class="view-tab" data-view="Project">Projects</button>
-    <button class="view-tab" data-view="Partner">Partners</button>
-    <button class="view-tab" data-view="Media Report">Media reports</button>
-    <button class="view-tab" data-view="Map/Chart">Maps &amp; charts</button>
-    <button class="view-tab" data-view="Cooperation Framework">Cooperation framework outcomes</button>
+    <button class="view-tab" data-view="Map/Chart">Maps &amp; Charts</button>
+  </div>
+</nav>
+
+<main>
+  <div class="page-heading">
+    <h1>UN Uganda Knowledge Repository</h1>
+    <p>A one stop collections of achievements, projects, partnerships, media reports, maps and Cooperation Framework outcomes across UN agencies in Uganda.</p>
   </div>
 
   <div class="filters">

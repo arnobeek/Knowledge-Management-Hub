@@ -7,7 +7,3 @@ def dashboard(request):
     available server-side, pass it into the context here and read it
     from the template instead of the hardcoded JS array."""
     return render(request, "dashboard/dashboard.html")
-
-
-def about(request):
-    return render(request, "dashboard/about.html")
